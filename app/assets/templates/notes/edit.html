@@ -1,4 +1,6 @@
-<h1>Edit: {{ note.title }}</h1>
+<div class="page-header">
+  <h2>Edit <small>{{ note.title }}</small></h2>
+</div>
 
 <form>
   <fieldset class="form-group">
@@ -16,5 +18,5 @@
     <textarea class="form-control" type="text" id="content" name="content" ng-model="note.content"></textarea>
   </fieldset>
 
-  <input type="submit" ng-value="isSubmitting ? 'Saving...' : 'Save'" class="btn btn-default" ng-click="saveNote(note)" ng-disabled="isSubmitting" />
+  <input type="submit" ng-value="isSubmitting ? 'Saving...' : 'Save'" class="btn btn-primary btn-lg pull-right clearfix" ng-click="saveNote(note)" ng-disabled="isSubmitting" />
 </form>

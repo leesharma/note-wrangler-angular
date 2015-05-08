@@ -4,6 +4,7 @@ angular.module('NoteWrangler').config(function($routeProvider){
       redirectTo: '/notes'
     })
 
+    // Note Resources
     .when('/notes', {
       templateUrl: 'assets/templates/notes/index.html',
       controller: 'NotesIndexController'
@@ -22,5 +23,16 @@ angular.module('NoteWrangler').config(function($routeProvider){
     .when('/notes/:id', {
       templateUrl: 'assets/templates/notes/show.html',
       controller: 'NotesShowController'
+    })
+
+    // User Resources
+    .when('/users', {
+      templateUrl: 'assets/templates/users/index.html',
+      controller: 'UsersIndexController'
+    })
+
+    .when('/users/:id', {
+      templateUrl: 'assets/templates/users/show.html',
+      controller: 'UsersShowController'
     })
 });
