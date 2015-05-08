@@ -1,1 +1,6 @@
-<h1>Show Note</h1>
+<div class="page-header">
+  <h1>{{ note.title }}<br />
+  <small>{{ note.user.name }}</small></h1>
+</div> 
+<p>{{ note.content }}</p>
+<p><span class="label label-info">{{ note.category.name }}</span></p>
