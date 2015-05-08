@@ -1,0 +1,8 @@
+<h1>Listing All Notes</h1>
+
+<div class="row">
+  <div ng-repeat="note in notes" class="col-sm-6">
+    <h2><a ng-href="#/notes/{{ note.id }}">{{ note.title }}</a></h2>
+    <p>{{ note.description }}</p>
+  </div>
+ </div>
