@@ -1,9 +1,9 @@
 {
   "name": "note-wrangler",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "A Code School Angular Production.",
-  "repository": "https://**alyssa here**",
+  "main": "app.js",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.4.3",
