@@ -1,6 +1,31 @@
-/*.container {
-  max-width: 800px;
-}*/
 body {
   margin-bottom: 25px;
+}
+
+/* Notes Category Filter */
+div.categories-filter {
+  margin-top: 1em;
+}
+
+/* Notes Search Bar */
+input.search-query {
+  margin-top: 0.65em;
+  margin-bottom: 0.5em;
+  padding-left:2em;
+  font-size: 1.5em;
+  height: 150%;
+}
+form.form-search {
+  position: relative;
+}
+form.form-search:before {
+  display: block;
+  font-size: 1.5em;
+  content: "\e003";
+  font-family: 'Glyphicons Halflings';
+  position: absolute;
+  top:.5em;
+  left:.5em;
+  opacity: .5;
+  z-index: 1000;
 }

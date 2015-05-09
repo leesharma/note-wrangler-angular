@@ -1,13 +1,19 @@
 <h2>
-  Notes
+  Listing Notes
   <a href="#/notes/new" class="btn btn-default pull-right">+ New Note</a>
 </h2>
 
 
 <div class="row">
   <div class="col-sm-9">
+    <!-- Note Search Field -->
+    <form class="form-search">
+        <input type="text" class="form-control search-query" placeholder="Search notes" ng-model="search.input.$" />
+    </form>
+
+    <!-- Notes -->
     <div class="row">
-      <div ng-repeat="note in notes | categoryFilter:search.category " class="col-sm-6">
+      <div ng-repeat="note in notes | categoryFilter:search.category | filter:search.input" class="col-sm-6">
         <h3><a ng-href="#/notes/{{ note.id }}">{{ note.title }}</a></h3>
         <p>{{ note.description }}</p>
         <p><span class="label label-info">{{ note.category.name }}</span></p>
@@ -15,9 +21,8 @@
     </div>
   </div>
 
-  <!-- Categories -->
-  <div class="categories col-sm-3">
-  <br />
+  <!-- Category Filter -->
+  <div class="categories-filter col-sm-3">
     <div class="panel panel-default">
       <div class="panel-heading">
         <h3 class="panel-title">Filter by Category</h3>
