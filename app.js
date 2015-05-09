@@ -1,3 +1,4 @@
+require('newrelic');
 var app = require("./server/routes");
 
 // Start the server
