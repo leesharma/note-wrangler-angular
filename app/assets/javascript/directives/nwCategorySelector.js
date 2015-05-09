@@ -1,4 +1,4 @@
-angular.module('NoteWrangler').directive('nwCategorySelector', function(Category, Note) {
+angular.module('NoteWrangler').directive('nwCategorySelector', ['Category', 'Note', function(Category, Note) {
   return {
     replace: true,
     restrict: 'E',
@@ -40,4 +40,4 @@ angular.module('NoteWrangler').directive('nwCategorySelector', function(Category
       };
     } 
   };
-});
+}]);

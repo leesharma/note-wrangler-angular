@@ -1,4 +1,4 @@
-angular.module('NoteWrangler').controller('NotesCreateController', function(Note, Category, User, $scope, $location) {
+angular.module('NoteWrangler').controller('NotesCreateController', ['Note', 'Category', 'User', '$scope', '$location', function(Note, Category, User, $scope, $location) {
   $scope.note = new Note();
   $scope.isSubmitting = false;
   $scope.categories = Category.query();
@@ -13,4 +13,4 @@ angular.module('NoteWrangler').controller('NotesCreateController', function(Note
         $scope.isSubmitting = false;
       });
   };
-});
+}]);

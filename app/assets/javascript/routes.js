@@ -1,4 +1,4 @@
-angular.module('NoteWrangler').config(function($routeProvider){
+angular.module('NoteWrangler').config(['$routeProvider', function($routeProvider){
   $routeProvider
     .when('/', {
       redirectTo: '/notes'
@@ -35,4 +35,4 @@ angular.module('NoteWrangler').config(function($routeProvider){
       templateUrl: 'assets/templates/users/show.html',
       controller: 'UsersShowController'
     })
-});
+}]);

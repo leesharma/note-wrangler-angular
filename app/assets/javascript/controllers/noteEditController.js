@@ -1,4 +1,4 @@
-angular.module('NoteWrangler').controller('NotesEditController', function(Note, Category, User, $scope, $routeParams, $location) {
+angular.module('NoteWrangler').controller('NotesEditController', ['Note', 'Category', 'User', '$scope', '$routeParams', '$location', function(Note, Category, User, $scope, $routeParams, $location) {
   $scope.note = Note.get({id: $routeParams.id});
   $scope.isSubmitting = false;
   $scope.categories = Category.query();
@@ -11,4 +11,4 @@ angular.module('NoteWrangler').controller('NotesEditController', function(Note, 
       $location.path('/notes/' + note.id);
     });
   };
-});
+}]);
