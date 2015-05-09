@@ -9,10 +9,11 @@
     <title>Note Wrangler</title>
 
     <!-- Vendor -->
+    <link rel="stylesheet" type="text/css" href="assets/styles/vendor/normalize.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/styles/vendor/bootstrap-flatly-theme.css" />
+    <!-- Overrides -->
     <link rel="stylesheet" type="text/css" href="assets/styles/application.css">
-    <!-- App Styles -->
   </head>
 
   <body>
@@ -25,24 +26,22 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#/">NoteWrangler</a>
+          <a class="navbar-brand" href="#/"><span class="glyphicon glyphicon-send" aria-hidden="true" style="margin-right:0.75em;"></span>NoteWrangler</a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
-          <!-- <ul class="nav navbar-nav">
-            <li><a href="#/notes">Notes</a></li>
-            <li><a href="#/users">Users</a></li>
-          </ul> -->
           <nw-page-nav></nw-page-nav>
         </div>
       </div>
     </nav>
 
     <div class="container">
+      <!-- Jumbotron -->
       <div class="jumbotron">
         <h1>Note Wrangler</h1>
         <p>Metus morbi habitasse aliquam netus pretium? Magna velit nostra.</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+        <p><a class="btn btn-primary btn-lg" href="#/" role="button">Learn more</a></p>
       </div>
+      <!-- Content -->
       <div ng-view>
         <h1 class="text-center">
           Just a moment, the page is loading.<br />
