@@ -1,0 +1,5 @@
+<ul class="nw-category-selector nav nav-pills nav-stacked">
+  <li role="presentation" ng-class="{ 'active':isActive(category) }" ng-repeat="category in categories">
+    <a href ng-click="toggleCategory(category)">{{ category.name }} ({{ noteCount(category) }})</a>
+  </li>
+</ul>
