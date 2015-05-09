@@ -1,6 +1,8 @@
-angular.module('NoteWrangler').controller('NotesCreateController', function(Note, $scope, $location) {
+angular.module('NoteWrangler').controller('NotesCreateController', function(Note, Category, User, $scope, $location) {
   $scope.note = new Note();
   $scope.isSubmitting = false;
+  $scope.categories = Category.query();
+  $scope.users = User.query();
 
   $scope.saveNote = function(note) {
     $scope.isSubmitting = true;
